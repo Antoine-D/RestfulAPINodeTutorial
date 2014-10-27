@@ -1,0 +1,54 @@
+
+> imbo@0.0.0 start /root/imbo
+> node ./bin/www
+
+[0mGET /api/users/all [33m404 [0m18.508 ms - 829[0m
+[0mGET /favicon.ico [33m404 [0m2.880 ms - 829[0m
+[0mGET /api/users/ [33m404 [0m1.974 ms - 829[0m
+SELECT * FROM Comments WHERE PageURL='http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg'
+[0mGET /api/pages/http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg [32m200 [0m91.221 ms - 41[0m
+http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg
+Tom
+London Picture, nice!
+INSERT INTO Comments VALUES ('London Picture, nice!', NOW(), 'Tom', 'http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg')
+[0mPOST /api/pages/add/ [32m200 [0m5.109 ms - -[0m
+SELECT * FROM Comments WHERE PageURL='http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg'
+[0mGET /api/pages/http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg [32m200 [0m5.423 ms - 99[0m
+SELECT * FROM Comments WHERE PageURL='pages'
+[0mGET /api/pages [32m200 [0m4.251 ms - 41[0m
+SELECT * FROM Comments WHERE PageURL='http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg'
+[0mGET /api/pages/http://cdni.wired.co.uk/1920x1280/k_n/London_5.jpg [32m200 [0m3.188 ms - 99[0m
+[0mGET / [32m200 [0m2.615 ms - 207[0m
+[0mGET /robots.txt [33m404 [0m4.867 ms - 829[0m
+SELECT * FROM Comments WHERE PageURL='add/'
+[0mGET /api/pages/add/ [32m200 [0m6.471 ms - 41[0m
+[0mGET / [32m200 [0m1.306 ms - 207[0m
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/root/imbo/node_modules/mysql/lib/protocol/Protocol.js:103:13)
+    at Socket.<anonymous> (/root/imbo/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.emit (events.js:117:20)
+    at _stream_readable.js:938:16
+    at process._tickCallback (node.js:419:13)
+
+npm ERR! imbo@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 8
+npm ERR! 
+npm ERR! Failed at the imbo@0.0.0 start script.
+npm ERR! This is most likely a problem with the imbo package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     node ./bin/www
+npm ERR! You can get their info via:
+npm ERR!     npm owner ls imbo
+npm ERR! There is likely additional logging output above.
+npm ERR! System Linux 3.13.0-24-generic
+npm ERR! command "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+npm ERR! cwd /root/imbo
+npm ERR! node -v v0.10.30
+npm ERR! npm -v 1.4.21
+npm ERR! code ELIFECYCLE
+npm ERR! 
+npm ERR! Additional logging details can be found in:
+npm ERR!     /root/imbo/npm-debug.log
+npm ERR! not ok code 0
